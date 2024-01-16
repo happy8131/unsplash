@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 export const selectImg = [
-  { id: 0, category: "보도/편집 전용", en: "edit" },
+  { id: 0, category: "편집", en: "edit" },
   { id: 1, category: "팔로잉", en: "following" },
   { id: 2, category: "|", en: "x" },
   { id: 3, category: "단색", en: "solid-color" },
@@ -16,10 +16,10 @@ export const selectImg = [
 ];
 
 export const select = [
-  { id: 0, category: "사진", en: "photo" },
-  { id: 1, category: "좋아요", en: "bookmark" },
-  { id: 2, category: "컬렉션", en: "collections" },
-  { id: 3, category: "통계", en: "total" },
+  { id: 0, category: "컬렉션", en: "collections" },
+  { id: 1, category: "사진", en: "photo" },
+
+  { id: 2, category: "통계", en: "total" },
 ];
 
 export interface PhotoListProps {

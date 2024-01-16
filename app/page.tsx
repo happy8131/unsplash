@@ -28,6 +28,7 @@ export default function Home() {
         }
 
         setLoading(false);
+
         setPhotoList(copy.results);
 
         setTotalPage(res.data.total_pages);
@@ -87,7 +88,7 @@ export default function Home() {
       <div
         className="-mt-3.5 relative overflow-hidden bg-cover bg-no-repeat p-12 text-center "
         style={{
-          backgroundImage: "url(/bg_img.png)",
+          backgroundImage: "url(/bg.png)",
           height: "400px",
         }}
       >
