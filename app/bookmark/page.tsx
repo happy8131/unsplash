@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { useSetRecoilState } from "recoil";
 
 const BookMark = () => {
-  const [category, setCategory] = useState("bookmark");
+  const [category, setCategory] = useState("collections");
   const setPhotoList = useSetRecoilState(photoState);
   const setTotalList = useSetRecoilState(totalState);
   useEffect(() => {
@@ -54,8 +54,6 @@ const BookMark = () => {
       CollectionHandler();
     } else if (category === "total") {
       TotalHandler();
-    } else {
-      BookMarkHandler();
     }
   }, [category]);
 

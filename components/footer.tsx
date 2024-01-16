@@ -11,7 +11,7 @@ const Footer = () => {
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <img
               className="max-w-40"
-              src="/willog.png"
+              src="/unsplash_image.png"
               alt="image description"
             />
           </a>

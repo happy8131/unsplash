@@ -6,17 +6,21 @@ const NavBar = () => {
   return (
     <header className="flex items-center justify-between sm:mx-10 mt-3">
       <Link href="/" className="flex items-center space-x-2">
-        <img className="max-w-40" src="/willog.png" alt="image" />
+        <img
+          className="max-w-40 rounded-md"
+          src="/unsplash_image.png"
+          alt="image"
+        />
+        {/* <h1 className="text-4xl font-bold font-mono">Unsplash</h1> */}
       </Link>
       <div className="px-5 flex space-x-4 items-center font-sans text-gray-500 font-bold">
-        <span className="rounded-lg bg-gray-200 p-2">사진 제출</span>
         <Link
           href="/bookmark"
           className="rounded-lg border-2 border-slate-200 p-2 cursor-pointer"
         >
-          북마크 ♡
+          Collection
         </Link>
-        <span>Evie | evie@willog.io</span>
+        <span>Unsplash | dlfwnd5532@gmail.com</span>
       </div>
     </header>
   );
