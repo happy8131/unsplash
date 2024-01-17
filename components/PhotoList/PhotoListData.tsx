@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { TfiArrowCircleUp } from "react-icons/tfi";
 import { HiOutlinePhoto } from "react-icons/hi2";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
-import PageNation from "../Pagination/Pagination";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 import ModalImg from "../Modal/Modal";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { bookmarkState, modalState, photoListValue } from "../atom/atom";
@@ -43,6 +44,9 @@ const PhotoListData = ({ page, setPage, totalPage }: PhotoListProps) => {
       </div>
     );
   }
+  const onChange = (e: ChangeEvent<unknown>, page: number) => {
+    setPage(page);
+  };
   return (
     <>
       <div className="bg-white grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 m-5 gap-8">
@@ -78,8 +82,18 @@ const PhotoListData = ({ page, setPage, totalPage }: PhotoListProps) => {
         />
       </div>
       <div className="flex justify-center">
-        <PageNation page={page} setPage={setPage} totalPage={totalPage} />
+        <Stack spacing={2}>
+          <Pagination
+            page={page}
+            count={totalPage > 300 ? totalPage - 300 : totalPage}
+            color="primary"
+            onChange={onChange}
+          />
+        </Stack>
       </div>
+      {/* <div className="flex justify-center">
+        <PageNation page={page} setPage={setPage} totalPage={totalPage} />
+      </div> */}
       <ModalImg showModal={showModal} onClose={() => setShowModal(false)} />
     </>
   );
