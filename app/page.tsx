@@ -23,14 +23,9 @@ export default function Home() {
         const res = await photoApis.photoSearchList(category, page);
         const resData = res.data;
         const copy = lodash.cloneDeep(resData);
-        for (let i = 0; i < copy?.results?.length; i += 1) {
-          if (!copy.results[i].bookmark) copy.results[i].bookmark = false;
-        }
 
         setLoading(false);
-
         setPhotoList(copy.results);
-
         setTotalPage(res.data.total_pages);
       } catch (err) {
         console.log("Error", err);

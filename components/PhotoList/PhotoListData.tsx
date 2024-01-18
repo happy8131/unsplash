@@ -9,15 +9,14 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import ModalImg from "../Modal/Modal";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { bookmarkState, modalState, photoListValue } from "../atom/atom";
+import { modalState, photoListValue } from "../atom/atom";
 import { MapProps, PhotoListProps } from "../types/type";
 import { photoApis } from "../apis/api";
 
 const PhotoListData = ({ page, setPage, totalPage }: PhotoListProps) => {
   const photoList = useRecoilValue(photoListValue);
   const [showModal, setShowModal] = useState(false);
-  const [modalData, setModalData] = useRecoilState(modalState);
-  const [bookmarkList, setBookMarkList] = useRecoilState(bookmarkState);
+  const [, setModalData] = useRecoilState(modalState);
 
   const MoveToTop = () => {
     // top:0 >> 맨위로  behavior:smooth >> 부드럽게 이동할수 있게 설정하는 속성
@@ -85,7 +84,7 @@ const PhotoListData = ({ page, setPage, totalPage }: PhotoListProps) => {
         <Stack spacing={2}>
           <Pagination
             page={page}
-            count={totalPage > 300 ? totalPage - 300 : totalPage}
+            count={totalPage > 300 ? Math.floor(totalPage / 3) : totalPage}
             color="primary"
             onChange={onChange}
           />
