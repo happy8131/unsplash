@@ -11,7 +11,6 @@ const NavBar = () => {
           src="/unsplash_image.png"
           alt="image"
         />
-        {/* <h1 className="text-4xl font-bold font-mono">Unsplash</h1> */}
       </Link>
       <div className="px-5 flex space-x-4 items-center font-sans text-gray-500 font-bold">
         <Link
