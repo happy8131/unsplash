@@ -74,8 +74,10 @@ export default function Home() {
             >
               {item.category}
               {category === item.en ? (
-                <div className="mt-4 flex border-b-2 border-b-black "></div>
-              ) : null}
+                <div className="mt-4 flex border-b-2 border-b-black"></div>
+              ) : (
+                <div className="mt-4"></div>
+              )}
             </div>
           );
         })}
@@ -136,7 +138,7 @@ export default function Home() {
         </div>
       </div>
       {loading ? (
-        <div className="container my-12 mx-auto px-4 md:px-12 hover:bg-gray-50">
+        <div className="container my-12 mx-auto px-4 md:px-12 ">
           <PhotoListData page={page} setPage={setPage} totalPage={totalPage} />
         </div>
       ) : (

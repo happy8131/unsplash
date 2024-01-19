@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { ChangeEvent, useState } from "react";
-import { TfiArrowCircleUp } from "react-icons/tfi";
+import { GoMoveToTop } from "react-icons/go";
 import { HiOutlinePhoto } from "react-icons/hi2";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
@@ -46,6 +46,7 @@ const PhotoListData = ({ page, setPage, totalPage }: PhotoListProps) => {
   const onChange = (e: ChangeEvent<unknown>, page: number) => {
     setPage(page);
   };
+
   return (
     <>
       <div className="bg-white grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 m-5 gap-8">
@@ -53,11 +54,11 @@ const PhotoListData = ({ page, setPage, totalPage }: PhotoListProps) => {
           return (
             <div
               key={item.id}
-              className="relative  cursor-pointer "
+              className="relative cursor-pointer"
               onClick={() => ShowModalHanlder(item.id)}
             >
               <img
-                className="flex flex-wrap  h-80 w-full "
+                className="flex flex-wrap  h-80 w-full rounded-md"
                 src={item.urls.small}
               />
               {item.liked_by_user ? (
@@ -74,11 +75,18 @@ const PhotoListData = ({ page, setPage, totalPage }: PhotoListProps) => {
         })}
       </div>
       <div className="h-full flex justify-end text-lg font-normal">
-        <TfiArrowCircleUp
+        {/* <TfiArrowCircleUp
           onClick={MoveToTop}
           className="cursor-pointer transform transition duration-500 hover:scale-125 hover:shadow-xl shadow-xl"
           size="30"
-        />
+        /> */}
+        {photoList.length >= 12 && (
+          <GoMoveToTop
+            onClick={MoveToTop}
+            className="cursor-pointer animate-bounce hover:scale-125 hover:shadow-xl shadow-xl"
+            size="30"
+          />
+        )}
       </div>
       <div className="flex justify-center">
         <Stack spacing={2}>

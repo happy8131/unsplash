@@ -5,7 +5,7 @@ const TotalListData = () => {
   const totalList = useRecoilValue(totalListValue);
 
   return (
-    <div className="overflow-x-visible relative sm:rounded-lg">
+    <div className="h-screen overflow-x-visible relative sm:rounded-lg">
       <table className="w-full mt-3 shadow-md text-left border-collapse">
         <thead className="text-xs text-gray-700 lg:bg-[#F7FAFC] bg-gray-50 border-b-2">
           <tr>
