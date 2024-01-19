@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
-import { TfiArrowCircleUp } from "react-icons/tfi";
+import { GoMoveToTop } from "react-icons/go";
 import { HiOutlinePhoto } from "react-icons/hi2";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
@@ -94,9 +94,9 @@ const BookmarkListData = ({ category }: { category: string }) => {
             })}
       </div>
       <div className="h-full flex justify-end text-lg font-normal">
-        <TfiArrowCircleUp
+        <GoMoveToTop
           onClick={MoveToTop}
-          className="cursor-pointer transform transition duration-500 hover:scale-125 hover:shadow-xl shadow-xl"
+          className="cursor-pointer animate-bounce hover:scale-125 hover:shadow-xl shadow-xl"
           size="30"
         />
       </div>

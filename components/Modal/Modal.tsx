@@ -6,16 +6,11 @@ import { MouseEvent } from "react";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { bookmarkState, modalState, photoState } from "../atom/atom";
+import { modalState } from "../atom/atom";
 import { MapProps, PhotoModalProps } from "../types/type";
-import { photoApis } from "../apis/api";
-
-const lodash = require("lodash");
 
 const ModalImg = ({ showModal, onClose }: PhotoModalProps) => {
-  const [photoList, setPhotoList] = useRecoilState(photoState);
   const [modalData, setModalData] = useRecoilState<MapProps>(modalState);
-  const [bookmarkList, setBookMarkList] = useRecoilState(bookmarkState);
 
   const handleClose = (e: MouseEvent<HTMLDivElement>) => {
     if ((e.target as HTMLButtonElement).id === "wrapper") onClose();
@@ -99,28 +94,6 @@ const ModalImg = ({ showModal, onClose }: PhotoModalProps) => {
           />
         </div>
 
-        {/* <div className="md:flex md:w-6/12 md:justify-between ml-5 mt-5 text-left text-slate-500 text-sm ">
-          <p>
-            이미지 크기{" "}
-            <span className="md:hidden flex text-slate-800 font-semibold text-sm mb-1">
-              {" "}
-              {modalData.width} X {modalData.height}
-            </span>
-          </p>
-          <p>
-            업로드
-            <span className="md:hidden flex text-slate-800 font-semibold text-sm mb-1">
-              {Math.ceil(day)}일 전 게시됨
-            </span>
-          </p>
-          <p>
-            다운로드
-            <span className="md:hidden flex text-slate-800 font-semibold text-sm">
-              {modalData.likes}
-            </span>
-          </p>
-        </div> */}
-
         <table className=" lg:ml-5 lg:w-5/12 w-full mt-5">
           <thead>
             <tr className="text-left ml-5 text-sm text-slate-500 space-x-10">
@@ -140,20 +113,12 @@ const ModalImg = ({ showModal, onClose }: PhotoModalProps) => {
           </tbody>
         </table>
 
-        {/* <div className="hidden md:flex md:w-6/12 md:justify-between  ml-5 mt-1 text-left text-slate-800 font-semibold text-sm">
-          <div>
-            {modalData.width} X {modalData.height}
-          </div>
-          <div>{Math.ceil(day)}일 전 게시됨</div>
-          <div>{modalData.likes}</div>
-        </div> */}
-
         <div className="lg:flex  lg:ml-5 mt-5 lg:text-left text-slate-600 font-base text-sm lg:space-x-7 mb-3">
           <p className="rounded-sm p-1 px-2 bg-gray-200">
             {modalData.user.name}
           </p>
           <p className="rounded-sm p-1 px-2 lg:mt-0 mt-1 bg-gray-200">
-            {modalData.user.instagram_username}
+            {modalData.exif.make ? modalData.exif.make : "Photo"}
           </p>
           <p className="rounded-sm p-1 px-2 lg:mt-0 mt-1 bg-gray-200">
             {modalData.alt_description}

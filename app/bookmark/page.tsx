@@ -63,7 +63,7 @@ const BookMark = () => {
   };
 
   return (
-    <section className="h-screen">
+    <section className="h-full">
       <div className="w-full flex justify-center items-center sm:space-x-10 space-x-3 md:mx-auto mx-2.5 mt-7 mb-3.5  text-slate-400 font-semibold font-sans">
         {select.map((item) => {
           return (
@@ -82,7 +82,7 @@ const BookMark = () => {
         })}
       </div>
       {category !== "total" ? (
-        <div className="container my-12 mx-auto px-4 md:px-12 hover:bg-gray-50">
+        <div className="container my-12 mx-auto px-4 md:px-12">
           <BookmarkListData category={category} />
         </div>
       ) : (

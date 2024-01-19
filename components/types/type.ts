@@ -40,6 +40,7 @@ export interface MapProps {
   updated_at: string;
   alt_description: string;
   downloads: number;
+  exif: { make: "" };
   liked_by_user: boolean;
   user: { instagram_username: string; name: string };
   urls: { small: string };

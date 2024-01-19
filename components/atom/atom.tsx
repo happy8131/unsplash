@@ -21,6 +21,7 @@ export const modalState = atom<MapProps>({
     alt_description: "",
     downloads: 0,
     liked_by_user: false,
+    exif: { make: "" },
     user: { instagram_username: "", name: "" },
     urls: { small: "" },
     links: { download: "" },
