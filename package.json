@@ -20,7 +20,8 @@
     "react-dom": "^18",
     "react-icons": "^5.0.0",
     "recoil": "^0.7.7",
-    "recoil-persist": "^5.1.0"
+    "recoil-persist": "^5.1.0",
+    "vercel": "^33.2.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
