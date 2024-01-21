@@ -95,12 +95,12 @@ export default function Home() {
         >
           <div className="flex h-full items-center justify-center">
             <div className="text-white">
-              <h1 className="mb-1 text-5xl font-bold text-left">Will Photo</h1>
+              <h1 className="mb-1 text-5xl font-bold text-left">Toy Photo</h1>
               <h4 className="mb-1 text-sm font-light text-left">
-                인터넷의 시각 자료 출처입니다.
+                Unsplash Open Api에서 제공하는 쿼리문입니다.
               </h4>
               <h4 className="mb-3 text-sm font-light text-left">
-                모든 지역에 있는 크리에이터들의 지원을 받습니다.
+                ex: cat, pupy, smoke, star등 여러 쿼리로 검색할 수 있습니다.
               </h4>
               <div className="flex">
                 <input
