@@ -25,7 +25,7 @@ const Footer = () => {
             <Link
               target="_blank"
               className="ml-3 text-gray-500"
-              href="https://github.com/happy8131/WYC"
+              href="https://github.com/happy8131/unsplash"
             >
               <DiGithubBadge
                 size={"1.7rem"}
@@ -35,7 +35,7 @@ const Footer = () => {
             <Link
               target="_blank"
               className="ml-3 text-gray-500"
-              href="https://happy8131.tistory.com/"
+              href="https://happy8131.tistory.com/135"
             >
               <SiBloglovin
                 size={"1.3rem"}
