@@ -23,12 +23,11 @@ unsplash 오픈 API 사진첩 프로젝트
 (https://unsplash-4lkmm4dbg-happy8131.vercel.app/)
 
 ## 사용법
-![스크린샷, 2024-01-19 17-50-01](https://github.com/happy8131/unsplash/assets/70251881/39aa8ad0-644a-4ef1-a7d1-10d822daa0f2)
+![스크린샷, 2024-01-22 00-07-42](https://github.com/happy8131/unsplash/assets/70251881/105259a0-6565-4dd9-89f7-19cb39d7d963)
+
+![스크린샷, 2024-01-22 00-07-10](https://github.com/happy8131/unsplash/assets/70251881/ff977ba6-e85d-488c-af4b-65a2d358d779)
 
 
-
-
-![스크린샷, 2024-01-19 23-15-34](https://github.com/happy8131/unsplash/assets/70251881/aad540db-6cee-47a4-aad7-7513c9aada06)
 
 검색창으로 사진을 볼 수 있습니다.
 
