@@ -2,12 +2,6 @@ import axios from "axios";
 
 const instance = axios.create({
   baseURL: "https://api.unsplash.com",
-  // headers: {
-  //   "content-type": "application/json;charset=UTF-8",
-  //   accept: "application/json",
-  //   "Access-Control-Allow-Origin": "unsplash.com",
-  //   "Access-Control-Allow-Credentials": true,
-  // },
 });
 
 export const photoApis = {
