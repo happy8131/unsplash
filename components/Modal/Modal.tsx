@@ -27,7 +27,7 @@ const ModalImg = ({ showModal, onClose }: PhotoModalProps) => {
   //   const copyList = lodash.cloneDeep(photoList);
   //   const copyBookMarkList = lodash.cloneDeep(bookmarkList);
   //   if (copy.bookmark) {
-  //     // 북마크가 true 면 false로 바꿔줍니다. 그리고 북마크 리스트에서도 제거 해줍니다.
+  //     /북마크가 true 면 false로 바꿔줍니다. 그리고 북마크 리스트에서도 제거 해줍니다.
   //     copy.bookmark = false;
   //     setBookMarkList(
   //       copyBookMarkList.filter((item: { id: string }) => {
@@ -35,7 +35,7 @@ const ModalImg = ({ showModal, onClose }: PhotoModalProps) => {
   //       })
   //     );
   //   } else {
-  //     // false면 true로 바꿔줍니다. 그리고 북마크리스트로 푸쉬해줍니다.
+  //      false면 true로 바꿔줍니다. 그리고 북마크리스트로 푸쉬해줍니다.
   //     copy.bookmark = true;
   //     copyBookMarkList.push(copy);
   //     setBookMarkList(copyBookMarkList);
