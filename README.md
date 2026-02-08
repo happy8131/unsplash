@@ -20,7 +20,7 @@ bun dev
 ## Learn More
 
 unsplash 오픈 API 사진첩 프로젝트
-(https://unsplash-4lkmm4dbg-happy8131.vercel.app/)
+https://unsplash-ashy.vercel.app/
 
 ## 사용법
 ![스크린샷, 2024-01-22 00-07-42](https://github.com/happy8131/unsplash/assets/70251881/105259a0-6565-4dd9-89f7-19cb39d7d963)
